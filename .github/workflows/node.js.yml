@@ -3,6 +3,16 @@
 
 name: Node.js CI
 
+env: # Or as an environment variable
+      SECRET: ${{ secrets.SECRET  }}
+      DB_URL: ${{ secrets.DB_URL  }}
+      MAPBOX_TOKEN: ${{ secrets.MAPBOX_TOKEN  }}
+      CLOUDINARY_SECRET: ${{ secrets.CLOUDINARY_SECRET  }}
+      CLOUDINARY_KEY: ${{ secrets.CLOUDINARY_KEY  }}
+      CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME  }}
+      NODE_ENV: ${{ vars.NODE_ENV  }}
+
+
 on:
   push:
     branches: [ "main" ]
